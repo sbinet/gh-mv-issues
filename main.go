@@ -62,7 +62,7 @@ func main() {
 		srcIssues = issues
 	}
 
-	for _, issue := range srcIssues {
-		fmt.Printf("### #%d %v (%s)\n", *issue.Number, *issue.Title, *issue.State)
+	for i, issue := range srcIssues {
+		fmt.Printf("[%3d/%3d] #%d %v (%s)\n", i+1, len(srcIssues), *issue.Number, *issue.Title, *issue.State)
 	}
 }
